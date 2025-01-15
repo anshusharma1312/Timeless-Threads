@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Threads - Shop Section</title>
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: black;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+
+        }
+
+        .navbar .logo a {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 0px;
+        }
+
+        .navbar .nav-links li a {
+            color: white;
+            font-size: 18px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .shop-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 30px 0;
+        }
+
+        .shop-section {
+            width: 30%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #ddd;
+        }
+
+        .shop-section img {
+            width: 100%;
+            height: 60px border-radius
+        }
+
+        .shop-section h2 {
+            margin: 15px 0;
+            font-size: 20px;
+        }
+
+        .shop-section button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 14px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .shop-section button:hover {
+            background-color: #555;
+        }
+
+        /* Footer Styles */
+        footer {
+            height: 220px;
+            background-color: black;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+
+        }
+
+        .Copyrights {
+            position: relative;
+            top: 170px;
+            left: 65px;
+        }
+
+        /* Footer Styles */
+        footer {
+            height: 250px;
+            background-color: black;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+
+        }
+
+
+        .social-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links img {
+            position: relative;
+            top: 50px;
+            right: 65px;
+
+        }
+
+        .social-links li a {
+            color: white;
+            font-size: 18px;
+        }
+
+        .Follow {
+            text-decoration: underline;
+            position: relative;
+            top: 5px;
+            left: 50px;
+        }
+
+
+
+
+        .Contact li {
+            display: flex;
+            justify-content: start;
+            margin-bottom: 5px;
+            position: relative;
+            left: 715px;
+            top: 20px;
+        }
+
+        .Reach {
+            text-decoration: underline;
+            position: relative;
+            top: 5px;
+            left: 640px;
+            margin-bottom: 10px;
+        }
+
+        .underlined {
+            text-decoration: underline;
+            position: relative;
+            top: 5px;
+            left: 0px;
+            margin-bottom: 15px;
+        }
+
+        .Brands li {
+            display: flex;
+            justify-content: start;
+            margin-bottom: 5px;
+            position: relative;
+            left: 0px;
+            top: 10px;
+        }
+
+        .Copyrights {
+            position: relative;
+            top: 220px;
+            left: -250px;
+        }
+
+        .Collection {
+            text-decoration: underline;
+            position: relative;
+            top: 5px;
+            right: 400px;
+            margin-bottom: 15px;
+        }
+
+        .Category li {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 5px;
+            position: relative;
+            right: 398px;
+            top: 10px;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            margin-bottom: -10px;
+        }
+
+        h2 {
+            margin-top: -20px;
+        }
+
+        h3 {
+            margin-top: 10px;
+        }
+
+        h4 {
+            margin-top: 5px;
+        }
+
+        button {
+            margin-bottom:30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="Index.html">
+                <img src="Assests/Screenshot 2024-11-17 103843.png" alt="Timeless-Threads" class="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Track Order.html">Track Orders</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+            <li><a href="Sign Up.html">Sign In/Sign Up</a></li>
+
+        </ul>
+    </nav>
+    <!-- Shop Container -->
+    <div class="shop-container">
+        <!-- Men's Section -->
+        <section class="shop-section" id="mens">
+            <h2>Men's Watchessss</h2>
+            <img src="Watches/1.jpg" alt="Men's Watches">
+            <h1>MOVADO</h1>
+            <h3>Men | Bold</h3>
+            <h4>Rs.24,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/2.jpg" alt="Men's Watches">
+
+            <h1>VERSACE</h1>
+            <h2>Men | Field Force</h2>
+            <h4>Rs.29,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/3.jpg" alt="Men's Watches">
+
+            <h1>BALMAIN</h1>
+            <h3>Men | Gent</h3>
+            <h4>Rs.27,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/4.jpg" alt="Men's Watches">
+
+            <h1>CITIZEN</h1>
+            <h3>Men | Automatic</h3>
+            <h4>Rs.19,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/5.jpg" alt="Men's Watches" style="height: 400px;width: 330px;">
+
+            <h1>EDGE</h1>
+            <h3>Men | Baseline</h3>
+            <h4>Rs.17,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/6.jpg" alt="Men's Watches">
+
+            <h1>TISSOT</h1>
+            <h3>Men | PRX</h3>
+            <h4>Rs.26,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/7.jpg" alt="Men's Watches">
+
+            <h1>KENNETH COLE</h1>
+            <h3>Men | Fun Loving</h3>
+            <h4>Rs.34,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/11.jpg" alt="Men's Watches" style="height: 400px;width: 330px;">
+
+            <h1>EDGE</h1>
+            <h3>Men | Leather Edge</h3>
+            <h4>Rs.15,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/12.jpg" alt="Men's Watches">
+
+            <h1>CITIZEN</h1>
+            <h3>Men | Eco-Drive</h3>
+            <h4>Rs.17,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/13.jpg" alt="Men's Watches" style="height: 400px;width: 330px;">
+
+            <h1>EDGE</h1>
+            <h3>Men | Spark</h3>
+            <h4>Rs.12,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/14.jpg" alt="Men's Watches" style="height: 400px;width: 330px;">
+
+            <h1>EDGE</h1>
+            <h3>Men | Speed</h3>
+            <h4>Rs.14,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/15.jpg" alt="Men's Watches">
+
+            <h1>ARMANI</h1>
+            <h3>Men | Bold</h3>
+            <h4>Rs.20,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/24.jpg" alt="Men's Watches" style="height: 400px;width: 330px;">
+
+            <h1>G-SHOCK</h1>
+            <h3>Men | W Bar</h3>
+            <h4>Rs.32,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/25.jpg" alt="Men's Watches" style="height: 400px;width: 330px;">
+
+            <h1>G-SHOCK</h1>
+            <h3>Men | Active</h3>
+            <h4>Rs.29,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Watches/Gold.jpg" alt="Men's Watches" style="height: 400px;width: 330px;">
+
+            <h1>EDGE</h1>
+            <h3>Men | Classic</h3>
+            <h4>Rs.39,499</h4>
+            <button>Add to Cart</button>
+        </section>
+
+        <!-- Women's Section -->
+        <section class="shop-section" id="womens">
+            <h2>Women's Watchesss</h2>
+            <img src="Women/1.jpg" alt="Women's Watches">
+
+            <h1>FOSSIL</h1>
+            <h3>Women | Everyday</h3>
+            <h4>Rs.14,999</h4>
+
+            <button>Add to Cart</button>
+
+            <img src="Women/16.jpg" alt="Women's Watches">
+
+            <h1>MOVADO</h1>
+            <h3>Women | Grace</h3>
+            <h4>Rs.13,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/3.jpg" alt="Women's Watches">
+
+            <h1>BALMAIN</h1>
+            <h3>Women | Bloom</h3>
+            <h4>Rs.23,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/4.jpg" alt="Women's Watches">
+
+            <h1>ARMANI</h1>
+            <h3>Women | Pink</h3>
+            <h4>Rs.18,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/5.jpg" alt="Women's Watches" style="height: 410px;width: 330px;">
+
+            <h1>GUESS</h1>
+            <h3>Women | Horizon</h3>
+            <h4>Rs.19,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/6.jpg" alt="Women's Watches" style="height: 410px;width: 330px;">
+
+            <h1>RAGA</h1>
+            <h3>Women | Opal</h3>
+            <h4>Rs.21,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/7.jpg" alt="Women's Watches" style="height: 400px;width: 330px;">
+
+            <h1>ANNE KLEIN</h1>
+            <h3>Women | Charm</h3>
+            <h4>Rs.20,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/8.jpg" alt="Women's Watches" style="height: 400px;width: 330px;">
+
+            <h1>BALMAIN</h1>
+            <h3>Women | Ivory</h3>
+            <h4>Rs.22,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/9.jpg" alt="Women's Watches" style="height: 410px;width: 330px;">
+
+            <h1>ANNE KLEIN</h1>
+            <h3>Women | Grace</h3>
+            <h4>Rs.27,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/10.jpg" alt="Women's Watches">
+
+            <h1>COACH</h1>
+            <h3>Women | Bold</h3>
+            <h4>Rs.35,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/11.jpg" alt="Women's Watches" style="height: 400px;width: 330px;">
+
+            <h1>MOVADO</h1>
+            <h3>Women | Classic</h3>
+            <h4>Rs.17,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/12.jpg" alt="Women's Watches" style="height: 400px;width: 330px;">
+
+            <h1>SWAROVSKI</h1>
+            <h3>Women | Swiss</h3>
+            <h4>Rs.30,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/13.jpg" alt="Women's Watches" style="height: 410px;width: 330px;">
+
+            <h1>ANNE KLEIN</h1>
+            <h3>Women | Diak</h3>
+            <h4>Rs.39,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/14.jpg" alt="Women's Watches" style="height: 400px;width: 330px;">
+
+            <h1>D W</h1>
+            <h3>WOmen | Class</h3>
+            <h4>Rs.24,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Women/15.jpg" alt="Women's Watches" style="height: 400px;width: 330px;">
+
+            <h1>RAGA</h1>
+            <h3>Women | Pierced</h3>
+            <h4>Rs.37,999</h4>
+            <button>Add to Cart</button>
+        </section>
+
+        <!-- Smartwatches Section -->
+        <section class="shop-section" id="smartwatches">
+            <h2>Smartwatchesss</h2>
+            <img src="Smart/1.jpg" alt="Smartwatches" style="height: 410px;width: 350px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex| GTS</h3>
+            <h4>Rs.24,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/2.jpg" alt="Smartwatches" style="height: 420px;width: 350px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | GTS 2</h3>
+            <h4>Rs.13,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/3.jpg" alt="Smartwatches" style="height: 410px;width: 350px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | GTR</h3>
+            <h4>Rs.14,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/9.jpg" alt="Smartwatches" style="height: 410px;width: 350px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | Charge</h3>
+            <h4>Rs.17,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/6.jpg" alt="Smartwatches" style="height: 410px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | GTR</h3>
+            <h4>Rs.16,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/7.jpg" alt="Smartwatches" style="height: 410px;width: 350px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | GTS</h3>
+            <h4>Rs.9,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/8.jpg" alt="Smartwatches" style="height: 400px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | GTS</h3>
+            <h4>Rs.11,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/9.jpg" alt="Smartwatches" style="height: 400px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | GTR 4</h3>
+            <h4>Rs.18,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/10.jpg" alt="Smartwatches" style="height: 410px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | GTR 2</h3>
+            <h4>Rs.14,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/11.jpg" alt="Smartwatches" style="height: 410px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | G Series</h3>
+            <h4>Rs.19,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/12.jpg" alt="Smartwatches" style="height: 400px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | G Series</h3>
+            <h4>Rs.16,499</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/13.jpg" alt="Smartwatches" style="height: 400px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | G Series</h3>
+            <h4>Rs.11,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/14.jpg" alt="Smartwatches" style="height: 410px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | Valerie</h3>
+            <h4>Rs.13,999</h4>
+            <button>Add to Cart</button>
+
+            <img src="Smart/16.jpg" alt="Smartwatches" style="height: 400px;width: 330px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | Maestro 3</h3>
+            <h4>Rs.18,499</h4>
+            <button>Add to Cart</button>
+            <img src="Smart/17.jpg" alt="Smartwatches" style="height: 400px;width: 330px; margin-top: 0px;">
+
+            <h1>AMAZFIT</h1>
+            <h3>Unisex | Valerie 2</h3>
+            <h4>Rs.14,999</h4>
+            <button>Add to Cart</button>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+
+            <ul class="Brands">
+                <p class="underlined">BRAND COLLECTION.</p>
+
+                <li>Titan</li>
+                <li>Versace</li>
+                <li>Rolex</li>
+                <li>G-Shock</li>
+                <li>Fossil</li>
+                <li>Balmain</li>
+                <li>Anne klein</li>
+            </ul>
+            <ul class="Contact ">
+                <p class="Reach">CONTACT US.</p>
+                <li>1800-266-103</li>
+                <li>customercare@timelessthreads.co.in</li>
+                <li>FAQs</li>
+
+            </ul>
+            <ul class="Category">
+                <p class="Collection">CATEGORIES.</p>
+                <li>Men</li>
+                <li>Women</li>
+                <li>Smartwatch</li>
+
+            </ul>
+            <p class="Copyrights">2024 Timeless-Threads. All rights reserved.</p>
+            <ul class="social-links">
+                <p class="Follow">FOLLOW US</p>
+                <li><a href="#"><img src="Assests/facebook.png" alt="Facebook" style="height: 50px; width: 50px;"></a>
+                </li>
+                <li><a href="#"><img src="Assests/instagram.png" alt="Instagram" style="height: 57px; width: 55px;"></a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

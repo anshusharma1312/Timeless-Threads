@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Threads - Sign In / Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script type="module" src="Firebaseauth.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background:rgb(57, 56, 56);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ddd(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .logo {
+            
+            font-size: 24px;
+            font-weight: 600px;
+            margin-bottom: 20px;
+        }
+        
+        img{
+            height: 300px;
+            width: 400px;
+
+        }
+
+        .tab {
+            display: flex;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .tab button {
+            flex: 1;
+            background: none;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 0;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: border-bottom-color 0.3s;
+        }
+
+        .tab button.active {
+            border-bottom-color: #00c6ff;
+        }
+
+        form {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        form.active {
+            display: flex;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.2);
+            color:azure;
+            outline: none;
+        }
+
+        input::placeholder {
+            color:#fff;
+        }
+
+        button.submit {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #00c6ff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button.submit:hover {
+            background: #007ea7;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+            color: #ddd;
+        }
+
+        .note a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        .note a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="logo">
+                <a href="Index.html">
+                    <img src="Assests/Screenshot 2024-11-17 103843.png" alt="Timeless Threads Logo">
+                </a>
+            </div>
+            <div class="tab">
+                <button id="signInTab" class="active">Sign In</button>
+                <button id="signUpTab">Sign Up</button>
+            </div>
+            <!-- Sign In Form -->
+            <form id="signInForm" class="active">
+                <label for="signInEmail">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+    
+                <label for="signInPassword">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+    
+                <button id="submit" type="submit" class="submit">Sign In</button>
+                <div class="note">Don't have an account? <a id="switchToSignUp" href="Sign Up.html">Sign Up</a></div>
+            </form>
+            <!-- Sign Up Form -->
+            <form id="signUpForm">
+                <label for="signUpFullName">Full Name</label>
+                <input type="text" id="signUpFullName" placeholder="Enter your full name" required>
+    
+                <label for="signUpEmail">Email Address</label>
+                <input type="email" id="signUpEmail" placeholder="Enter your email" required>
+    
+                <label for="signUpPassword">Password</label>
+                <input type="password" id="signUpPassword" placeholder="Create a password" required>
+    
+                <label for="signUpConfirmPassword">Confirm Password</label>
+                <input type="password" id="signUpConfirmPassword" placeholder="Confirm your password" required>
+    
+                <button type="submit" class="submit">Sign Up</button>
+                <div class="note">Already have an account? <a id="switchToSignIn" href="#">Sign In</a></div>
+            </form>
+        </div>
+    
+        <script>
+            // Tabs and Form Toggle Logic
+            const signInTab = document.getElementById('signInTab');
+            const signUpTab = document.getElementById('signUpTab');
+            const signInForm = document.getElementById('signInForm');
+            const signUpForm = document.getElementById('signUpForm');
+            const switchToSignUp = document.getElementById('switchToSignUp');
+            const switchToSignIn = document.getElementById('switchToSignIn');
+    
+            function toggleForm(activeForm, inactiveForm, activeTab, inactiveTab) {
+                activeForm.classList.add('active');
+                inactiveForm.classList.remove('active');
+                activeTab.classList.add('active');
+                inactiveTab.classList.remove('active');
+            }
+    
+            signInTab.addEventListener('click', () => {
+                toggleForm(signInForm, signUpForm, signInTab, signUpTab);
+            });
+    
+            signUpTab.addEventListener('click', () => {
+                toggleForm(signUpForm, signInForm, signUpTab, signInTab);
+            });
+    
+            switchToSignUp.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleForm(signUpForm, signInForm, signUpTab, signInTab);
+            });
+    
+            switchToSignIn.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleForm(signInForm, signUpForm, signInTab, signUpTab);
+            });
+        </script>
+    </body>
+    </html>
